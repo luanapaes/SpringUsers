@@ -27,6 +27,14 @@ public class UsuarioEntity {
 	@Column(nullable = false)
 	private String email;
 
+	public UsuarioEntity(UsuarioDTO usuario) {
+		BeanUtils.copyProperties(usuario, this);
+	}
+	
+	public UsuarioEntity() {
+		
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -67,5 +75,20 @@ public class UsuarioEntity {
 		this.email = email;
 	}
 	
-	
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UsuarioEntity other = (UsuarioEntity) obj;
+		return id == other.id;
+	}
 }
