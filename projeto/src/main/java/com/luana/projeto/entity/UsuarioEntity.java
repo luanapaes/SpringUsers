@@ -1,5 +1,11 @@
 package com.luana.projeto.entity;
 
+import java.util.Objects;
+
+import org.springframework.beans.BeanUtils;
+
+import com.luana.projeto.dto.UsuarioDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
