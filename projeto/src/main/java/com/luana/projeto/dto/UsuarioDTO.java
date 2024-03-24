@@ -6,7 +6,6 @@ import com.luana.projeto.entity.UsuarioEntity;
 
 public class UsuarioDTO {
 	
-
 	private long id;
 	private String nome;
 	private String login;
@@ -21,7 +20,6 @@ public class UsuarioDTO {
 	public UsuarioDTO() {
 		
 	}
-	
 	
 	public long getId() {
 		return id;
